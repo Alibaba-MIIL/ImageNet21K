@@ -7,7 +7,6 @@
 
 import argparse
 import time
-
 import torch
 import torch.nn.parallel
 import torch.optim

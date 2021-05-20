@@ -1,4 +1,3 @@
-
 # --------------------------------------------------------
 # ImageNet-21K Pretraining for The Masses
 # Copyright 2021 Alibaba MIIL (c)
@@ -8,7 +7,6 @@
 
 import argparse
 import time
-
 import torch
 import torch.nn.parallel
 import torch.optim
@@ -84,7 +82,7 @@ def train_21k(model, train_loader, val_loader, optimizer, args):
         for i, (input, target) in enumerate(train_loader):
             with autocast():  # mixed precision
                 output = model(input)
-                loss = loss_fn(output, target) # note - loss also in fp16
+                loss = loss_fn(output, target)  # note - loss also in fp16
             model.zero_grad()
             scaler.scale(loss).backward()
             scaler.step(optimizer)
@@ -94,8 +92,8 @@ def train_21k(model, train_loader, val_loader, optimizer, args):
         epoch_time = time.time() - epoch_start_time
         print_at_master(
             "\nFinished Epoch, Training Rate: {:.1f} [img/sec]".format(len(train_loader) *
-                                                                      args.batch_size / epoch_time * max(num_distrib(),
-                                                                                                         1)))
+                                                                       args.batch_size / epoch_time * max(num_distrib(),
+                                                                                                          1)))
 
         # validation epoch
         validate_21k(val_loader, model)
