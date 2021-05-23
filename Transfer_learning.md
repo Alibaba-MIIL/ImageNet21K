@@ -1,7 +1,7 @@
 #  Transfer Learning Code
 
-Due to commercial limitations, we cannot share at this time the transfer learning code used in the article. However, using
-the excellent [timm](https://github.com/rwightman/pytorch-image-models) package, the article result can be reproduced almost completely.
+Due to commercial limitations, we cannot share at this time the transfer learning code used in the article.
+However, using the excellent [timm](https://github.com/rwightman/pytorch-image-models) package, the article result can be reproduced almost completely.
 Specifically, timm package enables to compare official pretraining and miil pretraining of ViT and Mixer model, and validate the improvement in
 transfer learning results. This comparison also enables to show how miil pretraining stabilizes transfer learning results, and make them far less susceptible to hyper-parameter selection.
 
@@ -24,7 +24,7 @@ python train.py \
 --opt=adam --weight-decay=1e-4 \
 ```
 
-These are the result we got for the official 21k pretrain (--model=mixer_b16_224_in21k) and miil 21k pretrain (--model=mixer_b16_224_in21k), for different hyper-parameter selection:
+These are the result we got for the official 21k pretrain (--model=mixer_b16_224_in21k) and miil 21k pretrain (--model=mixer_b16_224_miil_in21k), for different hyper-parameter selection:
 
 <!--| model  |  optimizer | weight decay | learning rate | score |-->
 <!--| :------------: | :--------------: | :--------------: | :--------------: | :--------------: |-->

@@ -93,7 +93,7 @@ python train_semantic_softmax.py \
 For shortening the training, we initialize the weights from standard ImageNet-1K. Recommended to use ImageNet-1K weights from this excellent [repo](https://github.com/rwightman/pytorch-image-models).
 
 ### (4) Transfer Learning Code
-See [here](Transfer_learning.md) for more details,
+See [here](Transfer_learning.md) for more details.
 
 ## Additional SoTA results
 The results in the article are comparative results, with fixed hyper-parameters.
