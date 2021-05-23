@@ -40,7 +40,7 @@ These are the result we got for the official 21k pretrain (--model=mixer_b16_224
 <!--mixer_b16_224_in21k | adamw | 1e-2 | 2e-4 | 84.7 |-->
 <!--mixer_b16_224_in21k | sgd   | 1e-4 | 2e-4 | 91.7 |-->
 
-|  Optimizer | Weight decay | Learning rate | Official pretrain score |  Miil pretrain score |
+|  Optimizer | Weight decay | Learning rate | Official pretrain Mixer-B-16 score |  Miil pretrain Mixer-B-16 score |
 | :--------------: | :--------------: | :--------------: | :--------------: | :--------------: |
 | adam  | 1e-4 | 4e-4 | 82.6 | **90.5** (+7.9) |
 | adam  | 1e-4 | 2e-4 | 84.0 | **91.1** (+7.1) |
