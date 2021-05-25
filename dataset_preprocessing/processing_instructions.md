@@ -20,3 +20,4 @@ The variant of ImageNet-21K-P, based on winter21 release, is a dataset with:
 "train set contains 11060223 samples, test set contains 522500 samples. 10450 classes"
 <br>
 As you can see, the number of samples is  similar to fall11 release, and the pretrain quality should remain the same.
+To train with winter21 version, use the relevant tree: --tree_path=./resources/winter21_imagenet21k_miil_tree.pth
