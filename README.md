@@ -25,12 +25,18 @@ We also show that we outperform previous ImageNet-21K pretraining schemes for pr
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
 <p align="center">
   <table  class="tg">
-    <td class="tg-c3ow"><img src="./pics/pic2.png" align="center" width="835" ></td>
+    <td class="tg-c3ow"><img src="./pics/pic2.png" align="center" width="600" ></td>
 </table>
  <table>
-  <tr>
-    <td class="tg-c3ow"><img src="./pics/pic1.png" align="center" width="400" ></td>
-    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="400" ></td>
+    <tr>
+    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="600" ></td>
+<!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
+  </tr>
+  </table>
+   <table>
+    <tr>
+    <td class="tg-c3ow"><img src="./pics/pic1.png" align="center" width="600" height="500"></td>
+<!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
   </tr>
   </table>
 </p>
@@ -57,23 +63,28 @@ An example result:
 [ResNet50](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/resnet50_miil_21k.pth) | 75.6 | 82.0 | 320 | 720 | 2760 |
 [TResNet-M](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/tresnet_m_miil_21k.pth) | 76.4 | 83.1 | 520 | 670 | 2970 |
 [TResNet-L (V2)](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/tresnet_l_v2_miil_21k.pth) | 76.7 | 83.9 | 240 | 300 | 1460 |
-[ViT_B_16_patch_224](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/vit_base_patch16_224_miil_21k.pth) | 77.6 | 84.4 | 160 | 340 | 1140 |
-
-See this [link](MODEL_ZOO.md) for more details.
+[ViT-B-16](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/vit_base_patch16_224_miil_21k.pth) | 77.6 | 84.4 | 160 | 340 | 1140 |
+See [here](MODEL_ZOO.md) for more details.
 <br>
 We highly recommend to start working with ImageNet-21K by testing these weights against standard ImageNet-1K pretraining, and comparing results on your relevant downstream tasks.
-After you will see a significant improvement (you will), proceed to pretraining new models.
+After you will see a significant improvement, proceed to pretraining new models.
 
 Note that some of our models, with 21K and 1K pretraining, are also avaialbe via the excellent [timm](https://github.com/rwightman/pytorch-image-models) package:
 ```
-model = timm.create_model('mobilenetv3_large_100_1k_miil', pretrained=True)
+21K:
 model = timm.create_model('mobilenetv3_large_100_in21k_miil', pretrained=True)
-model = timm.create_model('tresnet_m', pretrained=True)
 model = timm.create_model('tresnet_m_in21k_miil', pretrained=True)
-model = timm.create_model('vit_base_patch16_224_1k_miil', pretrained=True)
 model = timm.create_model('vit_base_patch16_224_in21k_miil', pretrained=True)
-```
+model = timm.create_model('mixer_b16_224_miil_in21k', pretrained=True)
 
+
+1K:
+model = timm.create_model('mobilenetv3_large_100_1k_miil', pretrained=True)
+model = timm.create_model('tresnet_m', pretrained=True)
+model = timm.create_model('vit_base_patch16_224_1k_miil', pretrained=True)
+model = timm.create_model('mixer_b16_224_miil', pretrained=True)
+```
+Using this [link](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) you can make sure we indeed reach the reported accuracies in the article.
 
 ### (2) Obtaining and Processing the Dataset
 See instructions for obtaining and processing the dataset in [here](./dataset_preprocessing/processing_instructions.md).
@@ -90,10 +101,10 @@ python train_semantic_softmax.py \
 --model_path=/mnt/models/mobilenetv3_large_100.pth \
 --epochs=80
 ```
-For shortening the training, we initialize the weights from standard ImageNet-1K. Recommended to use ImageNet-1K weights from this excellent [repo](https://github.com/rwightman/pytorch-image-models).
+For shortening the training, we initialize the weights from standard ImageNet-1K. Recommended to use ImageNet-1K weights from timm [repo](https://github.com/rwightman/pytorch-image-models).
 
 ### (4) Transfer Learning Code
-See [here](Transfer_learning.md) for more details.
+See [here](Transfer_learning.md) for reproduction code, that show how miil pretraining not only improves transfer learning results, but also make MLP models more stable and robust for hyper-parameters selection.
 
 ## Additional SoTA results
 The results in the article are comparative results, with fixed hyper-parameters.

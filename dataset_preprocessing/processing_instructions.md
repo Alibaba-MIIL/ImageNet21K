@@ -11,10 +11,8 @@ After you finish the preprocessing, the variant of ImageNet-21K-P based on fall1
 "train set contains 11797632 samples, test set contains 561052 samples. 11221 classes"
 
 ### Winter 21 Version
-Another way to obtain ImageNet_21K_P is via the [official ImageNet site](https://image-net.org/download.php), that now provides a direct link to the processed dataset, based on 'winter21_whole.tar.gz' file.
+Another way to obtain ImageNet-21K-P is via the [official ImageNet site](https://image-net.org/download.php), that now provides a direct link to the processed dataset, based on 'winter21_whole.tar.gz' file.
 Compared to earlier releases of ImageNet-21K, the winter21 version removed a small number of classes and samples.
 
 This variant of ImageNet-21K-P, based on winter21-release, is a dataset with:
-"train set contains 11060223 samples, test set contains 522500 samples. 10450 classes"
-
-As you can see, the number of samples is  similar to fall11-release, and the pretrain quality should remain the same.
+"train set contains 11060223 samples, test set contains 522500 samples. 10450 classes".
