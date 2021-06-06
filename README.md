@@ -24,18 +24,15 @@ Via a dedicated preprocessing stage, utilizing WordNet hierarchies, and a novel 
 We also show that we outperform previous ImageNet-21K pretraining schemes for prominent new models like ViT.
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
 <p align="center">
-  <table  class="tg">
-    <td class="tg-c3ow"><img src="./pics/pic2.png" align="center" width="600" ></td>
-</table>
  <table>
     <tr>
-    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="600" ></td>
+    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500"></td>
 <!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
   </tr>
   </table>
    <table>
     <tr>
-    <td class="tg-c3ow"><img src="./pics/pic1.png" align="center" width="600" height="500"></td>
+    <td class="tg-c3ow"><img src="./pics/pic1.png" align="center" width="500" height="350"></td>
 <!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
   </tr>
   </table>
@@ -64,6 +61,7 @@ An example result:
 [TResNet-M](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/tresnet_m_miil_21k.pth) | 76.4 | 83.1 | 520 | 670 | 2970 |
 [TResNet-L (V2)](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/tresnet_l_v2_miil_21k.pth) | 76.7 | 83.9 | 240 | 300 | 1460 |
 [ViT-B-16](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/vit_base_patch16_224_miil_21k.pth) | 77.6 | 84.4 | 160 | 340 | 1140 |
+
 See [here](MODEL_ZOO.md) for more details.
 <br>
 We highly recommend to start working with ImageNet-21K by testing these weights against standard ImageNet-1K pretraining, and comparing results on your relevant downstream tasks.
@@ -104,7 +102,7 @@ python train_semantic_softmax.py \
 For shortening the training, we initialize the weights from standard ImageNet-1K. Recommended to use ImageNet-1K weights from timm [repo](https://github.com/rwightman/pytorch-image-models).
 
 ### (4) Transfer Learning Code
-See [here](Transfer_learning.md) for reproduction code, that show how miil pretraining not only improves transfer learning results, but also make MLP models more stable and robust for hyper-parameters selection.
+See [here](Transfer_learning.md) for reproduction code, that show how miil pretraining not only improves transfer learning results, but also makes MLP models more stable and robust for hyper-parameters selection.
 
 ## Additional SoTA results
 The results in the article are comparative results, with fixed hyper-parameters.

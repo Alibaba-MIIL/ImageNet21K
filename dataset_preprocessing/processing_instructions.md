@@ -13,7 +13,7 @@ After you finish the preprocessing, the variant of ImageNet-21K-P, based on fall
 
 ### Winter 21 Version
 We collaborated with *image-net.org* to enable direct downloading of ImageNet-21K-P via the [official ImageNet site](https://image-net.org/download.php).  
-<br>  
+
 This variant of the processed dataset is based on 'winter21_whole.tar.gz' release of ImageNet-21K.
 Compared to earlier releases of ImageNet-21K, the winter21 version removed a small number of classes and samples.
 
