@@ -23,20 +23,12 @@ This paper aims to close this gap, and make high-quality efficient pretraining o
 Via a dedicated preprocessing stage, utilizing WordNet hierarchies, and a novel training scheme called semantic softmax, we show that different models, including small mobile-oriented models, significantly benefit from ImageNet-21K pretraining on numerous datasets and tasks.
 We also show that we outperform previous ImageNet-21K pretraining schemes for prominent new models like ViT.
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
-<p align="center">
- <table>
-    <tr>
-    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500"></td>
-<!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
-  </tr>
-  </table>
-   <table>
-    <tr>
-    <td class="tg-c3ow"><img src="./pics/pic1.png" align="center" width="500" height="350"></td>
-<!--    <td class="tg-c3ow"><img src="./pics/pic3.png" align="center" width="500" ></td>-->
-  </tr>
-  </table>
-</p>
+<br>
+<br>
+<img src="./pics/pic3.png" align="center" width="600">
+<br>
+<br>
+<img src="./pics/pic1.png" align="center" width="450" height="350"></td>
 
 ## 17/05/2021 Update - ImageNet-21K-P is Now Available for Downloading From the Official ImageNet Site
 ImageNet-21K-P processed dataset, based on ImageNet-21K winter release, is now available
