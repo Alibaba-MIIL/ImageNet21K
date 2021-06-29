@@ -62,16 +62,16 @@ After you will see a significant improvement, proceed to pretraining new models.
 Note that some of our models, with 21K and 1K pretraining, are also avaialbe via the excellent [timm](https://github.com/rwightman/pytorch-image-models) package:
 ```
 21K:
-model = timm.create_model('mobilenetv3_large_100_in21k_miil', pretrained=True)
-model = timm.create_model('tresnet_m_in21k_miil', pretrained=True)
-model = timm.create_model('vit_base_patch16_224_in21k_miil', pretrained=True)
+model = timm.create_model('mobilenetv3_large_100_miil_in21k', pretrained=True)
+model = timm.create_model('tresnet_m_miil_in21k', pretrained=True)
+model = timm.create_model('vit_base_patch16_224_miil_in21k', pretrained=True)
 model = timm.create_model('mixer_b16_224_miil_in21k', pretrained=True)
 
 
 1K:
-model = timm.create_model('mobilenetv3_large_100_1k_miil', pretrained=True)
+model = timm.create_model('mobilenetv3_large_100_miil', pretrained=True)
 model = timm.create_model('tresnet_m', pretrained=True)
-model = timm.create_model('vit_base_patch16_224_1k_miil', pretrained=True)
+model = timm.create_model('vit_base_patch16_224_miil', pretrained=True)
 model = timm.create_model('mixer_b16_224_miil', pretrained=True)
 ```
 Using this [link](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) you can make sure we indeed reach the reported accuracies in the article.
