@@ -2,6 +2,15 @@ import torch
 import numpy as np
 from torch import Tensor
 
+
+@torch.jit.script
+def stable_softmax(logits: torch.Tensor):
+    logits_m = logits - logits.max(dim=1)[0].unsqueeze(1)
+    exp = torch.exp(logits_m)
+    probs = exp / torch.sum(exp, dim=1).unsqueeze(1)
+    return probs
+
+
 class ImageNet21kSemanticSoftmax:
     def __init__(self, args):
         self.args = args
@@ -79,3 +88,44 @@ class ImageNet21kSemanticSoftmax:
                 semantic_targets_list[i, hir_levels - j - 1] = torch.where(ind_valid)[0]
 
         return semantic_targets_list.long().to(device=targets_original.device)
+
+    def estimate_teacher_confidence(self, preds_teacher: Tensor) -> Tensor:
+        """
+        Helper function:
+        return the sum probabilities of the top 5% classes in preds_teacher.
+        preds_teacher dimensions - [batch_size x num_of_classes]
+        """
+        with torch.no_grad():
+            num_elements = preds_teacher.shape[1]
+            num_elements_topk = int(np.ceil(num_elements / 20))  # top 5%
+            weights_batch = torch.sum(torch.topk(preds_teacher, num_elements_topk).values, dim=1)
+        return weights_batch
+
+    def calculate_KD_loss(self, input_student: Tensor, input_teacher: Tensor):
+        """
+        Calculates the semantic KD-MSE distance between student and teacher probabilities
+        input_student dimensions - [batch_size x num_of_classes]
+        input_teacher dimensions - [batch_size x num_of_classes]
+        """
+
+        semantic_input_student = self.split_logits_to_semantic_logits(input_student)
+        semantic_input_teacher = self.split_logits_to_semantic_logits(input_teacher)
+
+        losses_list = []
+        # scanning hirarchy_level_list
+        for i in range(len(semantic_input_student)):
+            # converting to semantic logits
+            inputs_student_i = semantic_input_student[i]
+            inputs_teacher_i = semantic_input_teacher[i]
+
+            # generating probs
+            preds_student_i = stable_softmax(inputs_student_i)
+            preds_teacher_i = stable_softmax(inputs_teacher_i)
+
+            # weight MSE-KD distances according to teacher confidence
+            loss_non_reduced = torch.nn.MSELoss(reduction='none')(preds_student_i, preds_teacher_i)
+            weights_batch = self.estimate_teacher_confidence(preds_teacher_i)
+            loss_weighted = loss_non_reduced * weights_batch.unsqueeze(1)
+            losses_list.append(torch.sum(loss_weighted))
+
+        return sum(losses_list)
