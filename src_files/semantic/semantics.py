@@ -110,10 +110,11 @@ class ImageNet21kSemanticSoftmax:
 
         semantic_input_student = self.split_logits_to_semantic_logits(input_student)
         semantic_input_teacher = self.split_logits_to_semantic_logits(input_teacher)
+        number_of_hierarchies = len(semantic_input_student)
 
         losses_list = []
         # scanning hirarchy_level_list
-        for i in range(len(semantic_input_student)):
+        for i in range(number_of_hierarchies):
             # converting to semantic logits
             inputs_student_i = semantic_input_student[i]
             inputs_teacher_i = semantic_input_teacher[i]
