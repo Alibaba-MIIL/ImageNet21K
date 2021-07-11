@@ -1,7 +1,6 @@
 #  Transfer Learning Code
 
-Due to commercial limitations, we cannot share at this time the transfer learning code used in the article.
-However, using the excellent [timm](https://github.com/rwightman/pytorch-image-models) package, the article result can be reproduced almost completely.
+Using the excellent [timm](https://github.com/rwightman/pytorch-image-models) package, the article result can be reproduced almost completely.
 Specifically, timm package enables to compare official pretraining and miil pretraining of ViT and Mixer model, and validate the improvement in
 transfer learning results. This comparison also enables to show how miil pretraining stabilizes transfer learning results, and make them far less susceptible to hyper-parameter selection.
 
