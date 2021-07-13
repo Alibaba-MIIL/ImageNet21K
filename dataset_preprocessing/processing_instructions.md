@@ -21,7 +21,4 @@ The variant of ImageNet-21K-P is a dataset with:
 <br>
 "train set contains 11060223 samples, test set contains 522500 samples. 10450 classes"
 <br>
-To train with winter21 version, use the relevant hierarchial tree:
-```
---tree_path=./resources/winter21_imagenet21k_miil_tree.pth
-```
+To train with winter21 version, use the relevant [hierarchial tree](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/winter21/imagenet21k_miil_tree.pth)
