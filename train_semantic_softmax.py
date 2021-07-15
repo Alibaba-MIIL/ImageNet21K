@@ -56,9 +56,6 @@ def main():
     # create optimizer
     optimizer = create_optimizer(model, args)
 
-    # setup distributed
-    model = to_ddp(model, args)
-
     # Data loading
     train_loader, val_loader = create_data_loaders(args)
 
