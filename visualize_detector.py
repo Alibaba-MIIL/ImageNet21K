@@ -18,7 +18,7 @@ import timm
 ############### Downloading metadata ##############
 print("downloading metadata...")
 url, filename = (
-    "https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/imagenet21k_miil_tree.pth",
+    "https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/fall11/imagenet21k_miil_tree.pth",
     "imagenet21k_miil_tree.pth")
 if not os.path.isfile(filename):
     urllib.request.urlretrieve(url, filename)
