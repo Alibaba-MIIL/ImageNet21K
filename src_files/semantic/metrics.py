@@ -36,6 +36,7 @@ class AccuracySemanticSoftmaxMet:
 
         result = result.detach()
         num_valids_total = num_valids_total.detach()
+        num_valids_total = num_valids_total.float()
         if num_distrib() > 1:
             result = reduce_tensor(result, num_distrib())
             num_valids_total = reduce_tensor(num_valids_total, num_distrib())
@@ -45,7 +46,7 @@ class AccuracySemanticSoftmaxMet:
 
     @property
     def value(self):
-        return self.total / self.count *100 if self.count != 0 else None
+        return self.total / self.count * 100 if self.count != 0 else None
 
     @property
     def name(self):

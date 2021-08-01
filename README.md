@@ -85,7 +85,12 @@ See instructions for obtaining and processing the dataset in [here](./dataset_pr
 
 
 ### (3) Training Code
-To use the traing code, first download ImageNet-21K-P [semantic tree](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/imagenet21k_miil_tree.pth) to your local ./resources/ folder
+To use the training code, first download the relevant ImageNet-21K-P semantic tree file to your local ./resources/ folder:
+- fall11 [semantic tree](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/fall11/imagenet21k_miil_tree.pth)
+- winter21 [semantic tree](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/resources/winter21/imagenet21k_miil_tree.pth)
+
+
+
 Example of semantic softmax training:
 ```
 python train_semantic_softmax.py \
