@@ -23,16 +23,10 @@ This paper aims to close this gap, and make high-quality efficient pretraining o
 Via a dedicated preprocessing stage, utilizing WordNet hierarchies, and a novel training scheme called semantic softmax, we show that different models, including small mobile-oriented models, significantly benefit from ImageNet-21K pretraining on numerous datasets and tasks.
 We also show that we outperform previous ImageNet-21K pretraining schemes for prominent new models like ViT.
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
-<br>
-<br>
-<img src="./pics/pic3.png" align="center" width="600">
-<br>
-<br>
-<img src="./pics/pic1.png" align="center" width="450" height="350"></td>
 
 ## 01/08/2021 Update - "ImageNet-21K Pretraining for the Masses" was accepted to NeurIPS 2021 !
-We are very happy to announce that "ImageNet-21K Pretraining for the Masses" article was accepted to NeurIPS 2021 (Datasets and Benchmarks [Track](https://nips.cc/Conferences/2021/CallForDatasetsBenchmarks). OpenReview is
-available [here](https://openreview.net/forum?id=Zkj_VcZ6ol&noteId=d9ah5hIBQfr).
+We are very happy to announce that "ImageNet-21K Pretraining for the Masses" article was accepted to NeurIPS 2021 (Datasets and Benchmarks [Track](https://nips.cc/Conferences/2021/CallForDatasetsBenchmarks)). OpenReview is
+available [here](https://openreview.net/forum?id=Zkj_VcZ6ol&noteId=1oUacUMpIbg).
 
 ## 17/05/2021 Update - ImageNet-21K-P is Now Available for Downloading From the Official ImageNet Site
 ImageNet-21K-P processed dataset, based on ImageNet-21K winter release, is now available
