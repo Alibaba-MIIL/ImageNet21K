@@ -30,6 +30,10 @@ Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA re
 <br>
 <img src="./pics/pic1.png" align="center" width="450" height="350"></td>
 
+## 01/08/2021 Update - "ImageNet-21K Pretraining for the Masses" was accepted to NeurIPS 2021 !
+We are very happy to announce that "ImageNet-21K Pretraining for the Masses" article was accepted to NeurIPS 2021 (Datasets and Benchmarks [Track](https://nips.cc/Conferences/2021/CallForDatasetsBenchmarks). OpenReview is
+available [here](https://openreview.net/forum?id=Zkj_VcZ6ol&noteId=d9ah5hIBQfr).
+
 ## 17/05/2021 Update - ImageNet-21K-P is Now Available for Downloading From the Official ImageNet Site
 ImageNet-21K-P processed dataset, based on ImageNet-21K winter release, is now available
 for easy downloading via the offical [ImageNet site](https://image-net.org/download-images.php).
