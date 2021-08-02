@@ -24,7 +24,12 @@ Via a dedicated preprocessing stage, utilizing WordNet hierarchies, and a novel 
 We also show that we outperform previous ImageNet-21K pretraining schemes for prominent new models like ViT.
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
 
-## 01/08/2021 Update - "ImageNet-21K Pretraining for the Masses" was accepted to NeurIPS 2021 !
+<br>
+<br>
+<img src="./pics/pic1.png" align="center" width="450" height="350"></td>
+
+
+## 01/08/2021 Update - "ImageNet-21K Pretraining for the Masses" Was Accepted to NeurIPS 2021 !
 We are very happy to announce that "ImageNet-21K Pretraining for the Masses" article was accepted to NeurIPS 2021 (Datasets and Benchmarks [Track](https://nips.cc/Conferences/2021/CallForDatasetsBenchmarks)). OpenReview is
 available [here](https://openreview.net/forum?id=Zkj_VcZ6ol&noteId=1oUacUMpIbg).
 
