@@ -6,8 +6,11 @@ Note: usage of ImageNet-21K-P is subjected to *image-net.org* [terms of access](
 For a fair comparison to previous works, the article results are based on 'fall11_whole.tar' original release of ImageNet-21K.
 The file contains all the original images and classes of ImageNet-21K, at full resolution. Its size is 1.31 TB.
 
-For preprocessing ImageNet-21K-P from the original dataset (see the article for more details), you can use following end-to-end [script](./processing_script.sh).
-After you finish the preprocessing, the variant of ImageNet-21K-P, based on fall1 release, should include:
+For preprocessing ImageNet-21K-P from the original dataset (see the article for more details), you can use one of the following end-to-end scripts:
+- [224 squish resizing (default option)](./processing_script.sh)
+- [256 short-edge resizing](./processing_script_short_edge.sh)
+
+After you finish the preprocessing, the variant of ImageNet-21K-P, based on fall11 release, should include:
 <br>
 "train set contains 11797632 samples, test set contains 561052 samples. 11221 classes"
 
