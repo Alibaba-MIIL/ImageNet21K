@@ -28,7 +28,7 @@ Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA re
 <br>
 <img src="./pics/pic1.png" align="center" width="450" height="350"></td>
 
-## 05/08/2021 Update - "Training From Random Initilization"
+## 05/08/2021 Update - Training From Random Initilization
 We release the following [script](./train_single_label_from_scratch.py), that reproduces the article results with random initialization, instead of initalizing from ImageNet-1K. The only change is that 140 epochs of training are needed, instead of 80, and we use SGD optimizer with a higher learning rate.
 We still recommend initializing your models from standard ImageNet-1K pretraining to reduce training times and save rainforests.
 
