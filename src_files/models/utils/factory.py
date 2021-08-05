@@ -51,7 +51,7 @@ def create_model(args):
         print("model: {} not found !!".format(args.model_name))
         exit(-1)
 
-    if args.model_path:  # make sure to load pretrained ImageNet-1K model
+    if args.model_path and args.model_path!='':  # make sure to load pretrained ImageNet-1K model
         model = load_model_weights(model, args.model_path)
     print('done\n')
 
