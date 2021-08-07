@@ -8,7 +8,7 @@
 <br>
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/imagenet-21k-pretraining-for-the-masses/image-classification-on-cifar-100)](https://paperswithcode.com/sota/image-classification-on-cifar-100?p=imagenet-21k-pretraining-for-the-masses)
 
-<br>[Paper](https://arxiv.org/pdf/2104.10972) |
+<br>[Paper](https://arxiv.org/pdf/2104.10972v4.pdf) |
 [Pretrained models](MODEL_ZOO.md)
 
 Official PyTorch Implementation
