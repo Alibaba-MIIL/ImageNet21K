@@ -28,22 +28,27 @@ Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA re
 <br>
 <img src="./pics/pic1.png" align="center" width="450" height="350"></td>
 
-## 05/08/2021 Update - Training From Random Initilization Script Released
-We release the following [script](./train_single_label_from_scratch.py), that reproduces the article results with random initialization, instead of initalizing from ImageNet-1K. The only change is that 140 epochs of training are needed, instead of 80, and we use SGD optimizer with a higher learning rate.
-We still recommend initializing your models from standard ImageNet-1K pretraining to reduce training times and save rainforests.
+## 24/10/2021 Update - New article released for partially annotated datasets
+Checkout our new project, [Multi-label Classification with Partial Annotations using Class-aware Selective Loss](https://github.com/Alibaba-MIIL/PartialLabelingCSL), where we presnet a top solution
+to multi-label datasets which are using partial annotation (such as Open Images and LVIS). Our soluion off-course uses large-scale TResNet pretraining.
 
-Note that we also released a new version of the article in arxiv, with additional interesting ablation tests. For example - comparison to Open Images pretraining, and more
-comparisons on non-classification tasks. Thanks to Matan Karklinsky for his help with Inria-holidays dataset.
+
+<!--## 05/08/2021 Update - Training From Random Initilization Script Released-->
+<!--We release the following [script](./train_single_label_from_scratch.py), that reproduces the article results with random initialization, instead of initalizing from ImageNet-1K. The only change is that 140 epochs of training are needed, instead of 80, and we use SGD optimizer with a higher learning rate.-->
+<!--We still recommend initializing your models from standard ImageNet-1K pretraining to reduce training times and save rainforests.-->
+
+<!--Note that we also released a new version of the article in arxiv, with additional interesting ablation tests. For example - comparison to Open Images pretraining, and more-->
+<!--comparisons on non-classification tasks. Thanks to Matan Karklinsky for his help with Inria-holidays dataset.-->
 
 
 ## 01/08/2021 Update - "ImageNet-21K Pretraining for the Masses" Was Accepted to NeurIPS 2021 !
 We are very happy to announce that "ImageNet-21K Pretraining for the Masses" article was accepted to NeurIPS 2021 (Datasets and Benchmarks [Track](https://nips.cc/Conferences/2021/CallForDatasetsBenchmarks)). OpenReview is
 available [here](https://openreview.net/forum?id=Zkj_VcZ6ol&noteId=1oUacUMpIbg).
 
-## 17/05/2021 Update - ImageNet-21K-P is Now Available for Downloading From the Official ImageNet Site
-ImageNet-21K-P processed dataset, based on ImageNet-21K winter release, is now available
-for easy downloading via the offical [ImageNet site](https://image-net.org/download-images.php).
-See more details on the different versions of ImageNet-21K-P in [here](./dataset_preprocessing/processing_instructions.md).
+<!--## 17/05/2021 Update - ImageNet-21K-P is Now Available for Downloading From the Official ImageNet Site-->
+<!--ImageNet-21K-P processed dataset, based on ImageNet-21K winter release, is now available-->
+<!--for easy downloading via the offical [ImageNet site](https://image-net.org/download-images.php).-->
+<!--See more details on the different versions of ImageNet-21K-P in [here](./dataset_preprocessing/processing_instructions.md).-->
 
 
 ## Getting Started
