@@ -24,14 +24,23 @@ Via a dedicated preprocessing stage, utilizing WordNet hierarchies, and a novel 
 We also show that we outperform previous ImageNet-21K pretraining schemes for prominent new models like ViT.
 Our proposed pretraining pipeline is efficient, accessible, and leads to SoTA reproducible results, from a publicly available dataset.
 
-<br>
-<br>
-<img src="./pics/pic1.png" align="center" width="450" height="350"></td>
+<!--<br>-->
+<!--<br>-->
+<!--<img src="./pics/pic1.png" align="center" width="450" height="350"></td>-->
 
-## 24/10/2021 Update - New article released for partially annotated datasets
-Checkout our new project, [Multi-label Classification with Partial Annotations using Class-aware Selective Loss](https://github.com/Alibaba-MIIL/PartialLabelingCSL), where we presnet a top solution
-to multi-label datasets which are using partial annotation (such as Open Images and LVIS). Our soluion off-course uses large-scale TResNet pretraining.
+## 29/11/2021 Update - New article released, offering new classification head with state-of-the-art results
+Checkout our new project, [Ml-Decoder](https://github.com/Alibaba-MIIL/ML_Decoder), which presents a unified classification head for multi-label, single-label and
+zero-shot tasks. Backbones with ML-Decoder reach SOTA results, while also improving speed-accuracy tradeoff.
 
+<p align="center">
+ <table class="tg">
+  <tr>
+    <td class="tg-c3ow"><img src="./pics/main_pic.png" align="center" width="300""></td>
+    <td class="tg-c3ow"><img src="./pics/ms_coco_scores.png" align="center" width="300" ></td>
+
+  </tr>
+</table>
+</p>
 
 <!--## 05/08/2021 Update - Training From Random Initilization Script Released-->
 <!--We release the following [script](./train_single_label_from_scratch.py), that reproduces the article results with random initialization, instead of initalizing from ImageNet-1K. The only change is that 140 epochs of training are needed, instead of 80, and we use SGD optimizer with a higher learning rate.-->
