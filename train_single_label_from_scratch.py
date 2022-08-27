@@ -21,7 +21,7 @@ from src_files.loss_functions.losses import CrossEntropyLS
 from torch.cuda.amp import GradScaler, autocast
 from src_files.optimizers.create_optimizer import create_optimizer, create_optimizer_sgd
 
-parser = argparse.ArgumentParser(description='PyTorch ImageNet21K Single-label Training From Random Initilization')
+parser = argparse.ArgumentParser(description='PyTorch ImageNet21K Single-label Training From Random Initialization')
 parser.add_argument('--data_path', type=str)
 parser.add_argument('--lr', default=1e-2, type=float)
 parser.add_argument('--model_name', default='tresnet_m')
